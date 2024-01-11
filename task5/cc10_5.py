@@ -5,7 +5,7 @@ def f(n):
     return abs(s1 - s2)
 
 
-for n in range(100000000, 900000000):
+for n in range(100, 900000000):
     if f(n) == 17:
         print(n)
         break
