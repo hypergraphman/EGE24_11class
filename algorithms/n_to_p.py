@@ -7,5 +7,4 @@ def n_to_p(n, p):
     return r
 
 
-# print(n_to_p(194, 5))  # 1234
-# print(n_to_p(255, 16))  # ff
+print(n_to_p(594, 6))
