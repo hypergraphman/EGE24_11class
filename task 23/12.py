@@ -3,20 +3,10 @@ def f(c, e, k):
         return 0
     if c == e:
         return 1
-    s = 0
-    if (c + 1) % 2 == 0:
-        s += f(c + 1, e, k + 1)
-    else:
-        s += f(c + 1, e, k)
-    if (c * 2) % 2 == 0:
-        s += f(c * 2, e, k + 1)
-    else:
-        s += f(c * 2, e, k)
-    if (c * 3) % 2 == 0:
-        s += f(c * 3, e, k + 1)
-    else:
-        s += f(c * 3, e, k)
-    return s
+    m = [f(c + 1, e, k + ((c + 1) + 1) % 2),
+         f(c * 2, e, k + ((c * 2) + 1) % 2),
+         f(c * 3, e, k + ((c * 3) + 1) % 2)]
+    return sum(m)
 
 
 print(f(1, 131, 0))

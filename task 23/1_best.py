@@ -9,4 +9,4 @@ def f(s, e):
     return sum(m)
 
 
-print(f(1, 150))
+print(f(1, 70) * f(70, 150))

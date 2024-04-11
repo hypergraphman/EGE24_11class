@@ -1,16 +1,16 @@
-def f(st, fin, k):
+def f(s, e, k):
     global a
-    if st > fin or k > 12:
+    if s > e or k > 15:
         return 0
-    if st == fin:
+    if s == e:
         a.append(k)
         return 1
-    m = [f(st + 1, fin, k + 1),
-         f(st + 2, fin, k + 1),
-         f(st * 2, fin, k + 1)]
+    m = [f(s + 1, e, k + 1),
+         f(s + 2, e, k + 1),
+         f(s * 2, e, k + 1)]
     return sum(m)
 
 
 a = []
-print(f(1, 500, 0))
+f(1, 35, 0)
 print(a.count(min(a)))
