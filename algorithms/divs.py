@@ -7,4 +7,4 @@ def divs(n):
     return sorted(d)
 
 
-print(len(divs(51)) == 2)
+print(len(divs(11213)) == 2)
